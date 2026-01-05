@@ -1,0 +1,16 @@
+{
+    "name": "Triangles with lasers",
+    "short_name": "Triangles",
+    "description": "You are a triangle, and you must shoot other triangles with lasers",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#000000",
+    "theme_color": "#00ff00",
+    "icons": [
+        {
+            "src": "icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}

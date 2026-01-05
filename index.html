@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangles with lasers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-overlay">
+            <div id="minimap-container">
+                <canvas id="minimap-canvas"></canvas>
+            </div>
+            <div id="leaderboard">
+                <h2>Leaderboard</h2>
+                <ul id="leaderboard-list"></ul>
+            </div>
+            <div id="progression">
+                <h2>Level: <span id="level">1</span></h2>
+                <div id="xp-bar">
+                    <div id="xp-fill"></div>
+                </div>
+                <p>XP: <span id="xp">0</span> / <span id="xp-needed">100</span></p>
+                <p>Killstreak: <span id="killstreak">0</span></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <div id="controls">
+                <p>WASD/Arrows: Move, Mouse/Space: Shoot</p>
+            </div>
+        </div>
+        <div id="notification"></div>
+    </div>
+    <script src="entities.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
